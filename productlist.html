@@ -8,7 +8,78 @@
     <link rel="stylesheet" href="productlist.css" />
 </head>
 <body>
-    <header><nav></nav></header>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <!---------- line with brands  ----------->
+          <div class="nav-brands">
+            <div class="brands">
+              <div class="silfen">
+                <img src="img/silfen.png" alt="logosilfen" />
+              </div>
+              <div class="silfenplay">
+                <img src="img/silfenplay.png" alt="silfenplay logo" />
+              </div>
+            </div>
+            <!------------ search and basket  --------------->
+            <div class="nav-buttons">
+              <div class="search-container">
+                <form action="/action_page.php">
+                  <input
+                    type="text"
+                    placeholder="Search for a product"
+                    name="search"
+                  />
+                  <button type="submit" class="search">
+                    <img src="img/search.png" alt="search button" />
+                  </button>
+                </form>
+              </div>
+              <button class="basket">
+                <img src="img/basket_1.png" alt="basket icon" />
+              </button>
+            </div>
+          </div>
+          <!------------------ line with categories ------------------->
+          <div class="hamburger-container">
+            <button class="nav-toggle">
+              <img src="img/hamburger.png" alt="burger-menu" />
+            </button>
+          </div>
+          <div class="nav-categories">
+            <ul id="sidemenu">
+              <li class="products">
+                <a class="linkproducts">Products</a>
+                <!---------- list of products  ---------->
+                <div class="productlinks">
+                  <a href="">Bumbags</a>
+                  <a href="">Crossbody bags</a>
+                  <a href="">Wallets</a>
+                  <a href="">Mini bags</a>
+                  <a href="">Shoulder bags</a>
+                  <a href="">Tote bags</a>
+                  <a href="">Care</a>
+                </div>
+              </li>
+              <li class="collections">
+                <a class="linkcollections">Collections</a>
+                <!-------------- list of collections ------------>
+                <div class="collectionlinks">
+                  <a href="">Snow Queen</a>
+                  <a href="">Recycle</a>
+                  <a href="">Classics</a>
+                </div>
+              </li>
+              <!-------------- other categories ------------ -->
+              <li><a href="">New Arrivals</a></li>
+              <li><a href="">Bestsellers</a></li>
+              <li><a href="">Sale</a></li>
+              <li><a href="">About us</a></li>
+              <li><a href="">Sustainability</a></li>
+            </ul>
+          </div>
+        </div>
+    </header>
     
     <main>
        
@@ -25,22 +96,24 @@
           
 
         </div>
+        <template id="product">
             <article class="product">
               <img class="productimage"
             
                 src="images_silfen/1.JPG"
                 alt="Bag"/>
               <h3>Bag</h3>
-              <p class="price">400dkk</p>
+              <p class="price">400 DKK</p>
             </article>
-      
+      </template>
+
             <article class="product">
                 <img class="productimage"
               
                   src="images_silfen/2.JPG"
                   alt="Bag"/>
                 <h3>Bag</h3>
-                <p class="price">400dkk</p>
+                <p class="price">400 DKK</p>
               </article>
          
               <article class="product">
@@ -49,7 +122,7 @@
                   src="images_silfen/3.JPG"
                   alt="Bag"/>
                 <h3>Bag</h3>
-                <p class="price">500dkk</p>
+                <p class="price"> 400 DKK</p>
               </article>
     </main>
 
