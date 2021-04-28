@@ -1,11 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
 body {
     background-color: rgb(230, 247, 255);
     margin: 0;
+    width: 100vw;
 }
 
 .background-video {
-    width: 100%;
+    width: 100vw;
     height: 70%;
     margin-left: 0;
     margin-right: 0;
 } 
+
+.splashes {
+    margin: 0;
+    width: 100vw;
+    position: absolute;
+}
+
+.splashes .splash {
+    width: 50%;
+}
+
+.splashes h1 {
+    font-family: Manrope, sans-serif;
+    font-size: 10vw;
+    color: lightseagreen;
+    opacity: 80%;
+}
+.splashes .bag {
+    width: 100vw;
+}
+
+#yellow-splashes {
+    width: 100vw;
+    height: 20vh;
+}
+
+#yellow-splash-shadow {
+    position: relative;
+    top: 5vw;
+}
+
+#yellow-splash {
+    position: relative;
+    top: -20vw
+}
+
+#artistic {
+    position: relative;
+    left: 15vw;
+    top: -50vw;
+}
+
+#blue-splashes {
+    text-align: right;
+    width: 100vw;
+    height: 20vh;
+}
+
+#blue-splash {
+    position: relative;
+    top: 20vw;
+}
+
+#blue-splash-shadow {
+    position: relative;
+    top: -5vw;
+    right: 0;
+}
+
+#pink-bag-img {
+    position: relative;
+    right: 3vw;
+    top: -45vw;
+    width: 30%;
+}
+
+#green-splashes {
+    width: 100vw;
+    height: 20vh;
+}
+
+#green-splash-shadow {
+    position: relative;
+    top: 35vw;
+}
+
+#green-splash {
+    position: relative;
+    top: 10vw;
+}
+
+#blue-bag-img {
+    position: relative;
+    left: 3vw;
+    top: -25vw;
+    width: 30%;
+}
+
+#purple-splashes {
+    text-align: right;
+    width: 100vw;
+    height: 20vh;
+}
+
+#purple-splash {
+    position: relative;
+    top: 50vw;
+}
+
+#purple-splash-shadow {
+    position: relative;
+    top: 25vw;
+}
+
+#innovative {
+    position: relative;
+    right: 8vw;
+    top: -10vw;
+}
+
+#yellow-splashes2 {
+    width: 100vw;
+    height: 20vh;
+}
+
+#yellow-splash-shadow2 {
+    position: relative;
+    top: 65vw;
+}
+
+#yellow-splash2 {
+    position: relative;
+    top: 40vw;
+}
+
+#teal-bag-img {
+    position: relative;
+    left: 3vw;
+    top: 5vw;
+    width: 30%;
+}
+
+#blue-splashes2 {
+    text-align: right;
+    width: 100vw;
+    height: 20vh;
+}
+
+#blue-splash2 {
+    position: relative;
+    top: 80vw;
+}
+
+#blue-splash-shadow2 {
+    position: relative;
+    top: 55vw;
+}
+
+#green-bag-img {
+    position: relative;
+    right: 3vw;
+    top: 13vw;
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
