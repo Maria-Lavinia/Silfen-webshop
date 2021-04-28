@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav</title>
+    <link rel="stylesheet" href="navcss.css" />
+  </head>
+  <body>
+    <!---------------- global navigation --------------->
+
+    <nav>
+      <div class="nav-container">
+        <!---------- line with brands  ----------->
+        <div class="nav-brands">
+          <div class="brands">
+            <div class="silfen">
+              <img src="img/silfen.png" alt="logosilfen" />
+            </div>
+            <div class="silfenplay">
+              <img src="img/silfenplay.png" alt="silfenplay logo" />
+            </div>
+          </div>
+          <!------------ search and basket  --------------->
+          <div class="nav-buttons">
+            <div class="search-container">
+              <form action="/action_page.php">
+                <input
+                  type="text"
+                  placeholder="Search for a product"
+                  name="search"
+                />
+                <button type="submit" class="search">
+                  <img src="img/search.png" alt="search button" />
+                </button>
+              </form>
+            </div>
+            <button class="basket">
+              <img src="img/basket_1.png" alt="basket icon" />
+            </button>
+          </div>
+        </div>
+        <!------------------ line with categories ------------------->
+        <div class="hamburger-container">
+          <button class="nav-toggle">
+            <img src="img/hamburger.png" alt="burger-menu" />
+          </button>
+        </div>
+        <div class="nav-categories">
+          <ul id="sidemenu">
+            <li class="products">
+              <a class="linkproducts">Products</a>
+              <!---------- list of products  ---------->
+              <div class="productlinks">
+                <a href="">Bumbags</a>
+                <a href="">Crossbody bags</a>
+                <a href="">Wallets</a>
+                <a href="">Mini bags</a>
+                <a href="">Shoulder bags</a>
+                <a href="">Tote bags</a>
+                <a href="">Care</a>
+              </div>
+            </li>
+            <li class="collections">
+              <a class="linkcollections">Collections</a>
+              <!-------------- list of collections ------------>
+              <div class="collectionlinks">
+                <a href="">Snow Queen</a>
+                <a href="">Recycle</a>
+                <a href="">Classics</a>
+              </div>
+            </li>
+            <!-------------- other categories ------------ -->
+            <li><a href="">New Arrivals</a></li>
+            <li><a href="">Bestsellers</a></li>
+            <li><a href="">Sale</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Sustainability</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script src="navjs.js"></script>
+  </body>
+</html>
