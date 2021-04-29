@@ -8,9 +8,9 @@ body {
 }
 
 .background-video {
-    width: 100vw;
+    width: 90vw;
     height: 70%;
-    margin-left: 0;
+    margin-left: 5vw;
     margin-right: 0;
 } 
 
@@ -90,7 +90,7 @@ body {
 }
 
 .section2 {
-    height: 140vh;
+    height: 120vh;
     width: 100vw;
     overflow: hidden;
 }
@@ -127,20 +127,21 @@ body {
 
 #purple-splash {
     position: relative;
-    top: 20vw;
+    top: 10vw;
     right: -30vw;
 }
 
 #purple-splash-shadow {
     position: relative;
-    top: -8vw;
+    top: -18vw;
     right: -30vw;
 }
 
 #innovative {
     position: relative;
     right: -25vw;
-    top: -42vw;
+    top: -52vw;
+    color: yellow;
 }
 
 .section3 {
@@ -156,27 +157,28 @@ body {
 
 #yellow-splash-shadow2 {
     position: relative;
-    top: 0vw;
+    top: -10vw;
     left: -35vw;
 }
 
 #yellow-splash2 {
     position: relative;
-    top: -25vw;
+    top: -35vw;
     left: -35vw;
 }
 
 #sustainable {
     position: relative;
     left: -25vw;
-    top: -58vw;
-    
+    top: -68vw;
+    z-index: 1;
 }
 
 #blue-splashes2 {
     text-align: right;
     width: 100vw;
     height: 20vh;
+    z-index: -1;
 }
 
 #blue-splash2 {
@@ -198,15 +200,21 @@ body {
     width: 30%;
 }
 
+.section4 {
+    height: 150vh;
+    overflow: hidden;
+}
+
 #newsletter {
     position: relative;
+    top: -100vw;
 }
 
 #blue-box {
     height: 120vh;
     width: 90vw;
     margin-left: 5vw;
-    margin-top: 20vw;
+    margin-top: 32vw;
     background-color: lightblue;
 }
 
@@ -217,11 +225,11 @@ body {
 
 #newsletter-title h1 {
     position: relative;
-    left: 0vw;
-    top: 3vw;
+    left: 7vw;
+    top: 3.5vw;
     font-family: Manrope, sans-serif;
-    font-size: 15vw;
-    color: blue;
+    font-size: 13vw;
+    color: yellow;
     mix-blend-mode: difference;
     z-index: 1;
     font-weight: 800;
@@ -229,10 +237,10 @@ body {
 
 #newsletter-photo {
     position: relative;
-    width: 30vw;
+    width: 25vw;
     z-index: 1;
     left: 10vw;
-    top: 85vw;
+    top: 90vw;
 }
 
 #newsletter h2 {
@@ -241,7 +249,7 @@ body {
     color: white;
     text-align: right;
     right: 15vw;
-    top: 45vw;
+    top: 55vw;
     z-index: 1;
     font-size: 3vw;
 }
@@ -252,7 +260,7 @@ body {
     color: white;
     text-align: right;
     right: 19vw;
-    top: 67vw;
+    top: 77vw;
     z-index: 1;
     font-size: 2.2vw;
 }
@@ -280,12 +288,12 @@ input {
 
 #name-label, #name {
     right: -20vw;
-    top: 50vw;
+    top: 60vw;
 }
 
 #email-label, #email {
-    right: 10vw;
-    top: 57vw;
+    right: 9.5vw;
+    top: 67vw;
 }
 
 #submit {
@@ -299,6 +307,6 @@ input {
     position: relative;
     z-index: 1;
     right: 28vw;
-    top: 65vw;
+    top: 75vw;
 }
 
