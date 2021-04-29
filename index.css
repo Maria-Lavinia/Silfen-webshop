@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
     background-color: rgb(230, 247, 255);
@@ -16,7 +17,6 @@ body {
 .splashes {
     margin: 0;
     width: 100vw;
-    position: absolute;
 }
 
 .splashes .splash {
@@ -26,8 +26,10 @@ body {
 .splashes h1 {
     font-family: Manrope, sans-serif;
     font-size: 10vw;
-    color: lightseagreen;
-    opacity: 80%;
+    color: hotpink;
+    mix-blend-mode: difference;
+    z-index: 1;
+    font-weight: 800;
 }
 .splashes .bag {
     width: 100vw;
@@ -118,7 +120,7 @@ body {
 
 #innovative {
     position: relative;
-    right: 8vw;
+    right: 10vw;
     top: -10vw;
 }
 
@@ -167,11 +169,91 @@ body {
     width: 30%;
 }
 
+#newsletter {
+    position: relative;
+}
 
+#blue-box {
+    height: 120vh;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 20vw;
+    background-color: lightblue;
+}
 
+#newsletter-title {
+    position: relative;
+    top: 95vw;
+}
 
+#newsletter-title h1 {
+    position: relative;
+    left: 0vw;
+    font-family: Manrope, sans-serif;
+    font-size: 15vw;
+    color: blue;
+    mix-blend-mode: difference;
+    z-index: 1;
+    font-weight: 800;
+}
 
+#newsletter-photo {
+    position: relative;
+    width: 30vw;
+    z-index: 1;
+    left: 10vw;
+    top: 85vw;
+}
 
+#newsletter h2 {
+    position: relative;
+    font-family: Roboto;
+    color: white;
+    text-align: right;
+    right: 15vw;
+    top: 45vw;
+    z-index: 1;
+    font-size: 3vw;
+}
 
+form {
+    text-align: right;
+}
 
+label, input {
+    position: relative;
+    font-family: Roboto;
+    color: white;
+    z-index: 1;
+    font-size: 2vw;
+}
+
+input {
+    border-radius: 5px;
+    border-color: lightblue;
+}
+
+#name-label, #name {
+    right: -20vw;
+    top: 50vw;
+}
+
+#email-label, #email {
+    right: 10vw;
+    top: 57vw;
+}
+
+#submit {
+    background-color: black;
+    color: white;
+    font-family: Roboto;
+    border-radius: 5px;
+    border-color: black;
+    font-size: 2vw;
+    padding: 7px 7px;
+    position: relative;
+    z-index: 1;
+    right: 28vw;
+    top: 65vw;
+}
 
