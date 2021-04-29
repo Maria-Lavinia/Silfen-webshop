@@ -207,13 +207,28 @@ body {
 
 #newsletter h2 {
     position: relative;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     color: white;
     text-align: right;
     right: 15vw;
     top: 45vw;
     z-index: 1;
     font-size: 3vw;
+}
+
+#newsletter h3 {
+    position: relative;
+    font-family: Roboto, sans-serif;
+    color: white;
+    text-align: right;
+    right: 19vw;
+    top: 67vw;
+    z-index: 1;
+    font-size: 2.2vw;
+}
+
+.hidden {
+    display: none;
 }
 
 form {
