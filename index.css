@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-    background-color: rgb(230, 247, 255);
+    background-color: rgba(123, 175, 212, 0.1);
     margin: 0;
     width: 100vw;
 }
@@ -58,9 +58,9 @@ body {
     left: -40vw;
 }
 
-#artistic {
+#trendy {
     position: relative;
-    left: -25vw;
+    left: -20vw;
     top: -55vw;
 }
 
@@ -114,8 +114,8 @@ body {
 
 #blue-bag-img {
     position: relative;
-    left: -27vw;
-    top: -60vw;
+    right: -27vw;
+    top: -50vw;
     width: 30%;
 }
 
@@ -150,18 +150,18 @@ body {
     overflow: hidden;
 }
 
-#yellow-splashes2 {
+#blue-splashes2 {
     width: 100vw;
     height: 20vh;
 }
 
-#yellow-splash-shadow2 {
+#blue-splash-shadow2 {
     position: relative;
     top: -10vw;
     left: -35vw;
 }
 
-#yellow-splash2 {
+#blue-splash2 {
     position: relative;
     top: -35vw;
     left: -35vw;
@@ -172,22 +172,23 @@ body {
     left: -25vw;
     top: -68vw;
     z-index: 1;
+    color: lightcoral;
 }
 
-#blue-splashes2 {
+#yellow-splashes2 {
     text-align: right;
     width: 100vw;
     height: 20vh;
     z-index: -1;
 }
 
-#blue-splash2 {
+#yellow-splash2 {
     position: relative;
     top: 15vw;
     right: -30vw;
 }
 
-#blue-splash-shadow2 {
+#yellow-splash-shadow2 {
     position: relative;
     top: -10vw;
     right: -30vw;
@@ -195,8 +196,8 @@ body {
 
 #yellow-bag-img {
     position: relative;
-    right: -25vw;
-    top: -50vw;
+    left: -25vw;
+    top: -60vw;
     width: 30%;
 }
 
@@ -211,7 +212,7 @@ body {
 }
 
 #blue-box {
-    height: 120vh;
+    height: 130vh;
     width: 90vw;
     margin-left: 5vw;
     margin-top: 32vw;
@@ -226,7 +227,7 @@ body {
 #newsletter-title h1 {
     position: relative;
     left: 7vw;
-    top: 3.5vw;
+    top: 4vw;
     font-family: Manrope, sans-serif;
     font-size: 13vw;
     color: yellow;
@@ -260,7 +261,7 @@ body {
     color: white;
     text-align: right;
     right: 19vw;
-    top: 77vw;
+    top: 73vw;
     z-index: 1;
     font-size: 2.2vw;
 }
@@ -288,12 +289,12 @@ input {
 
 #name-label, #name {
     right: -20vw;
-    top: 60vw;
+    top: 57vw;
 }
 
 #email-label, #email {
     right: 9.5vw;
-    top: 67vw;
+    top: 64vw;
 }
 
 #submit {
@@ -307,6 +308,6 @@ input {
     position: relative;
     z-index: 1;
     right: 28vw;
-    top: 75vw;
+    top: 71vw;
 }
 
