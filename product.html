@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <header><nav>
+      <div class="nav-container">
+        <!---------- line with brands  ----------->
+        <div class="nav-brands">
+          <div class="brands">
+            <div class="silfen">
+              <img src="img/silfen.png" alt="logosilfen" />
+            </div>
+            <div class="silfenplay">
+              <img src="img/silfenplay.png" alt="silfenplay logo" />
+            </div>
+          </div>
+          <!------------ search and basket  --------------->
+          <div class="nav-buttons">
+            <div class="search-container">
+              <form action="/action_page.php" class="nav-form">
+                <input
+                  type="text"
+                  placeholder="Search for a product"
+                  name="search"
+                />
+                <button type="submit" class="search">
+                  <img src="img/search.png" alt="search button" />
+                </button>
+              </form>
+            </div>
+            <button class="basket">
+              <img src="img/basket_1.png" alt="basket icon" />
+            </button>
+          </div>
+        </div>
+        <!------------------ line with categories ------------------->
+        <div class="hamburger-container">
+          <button class="nav-toggle">
+            <img src="img/hamburger.png" alt="burger-menu" />
+          </button>
+        </div>
+        <div class="nav-categories">
+          <ul id="sidemenu">
+            <li class="products">
+              <a class="linkproducts">Products</a>
+              <!---------- list of products  ---------->
+              <div class="productlinks">
+                <a href="">Bumbags</a>
+                <a href="">Crossbody bags</a>
+                <a href="">Wallets</a>
+                <a href="">Mini bags</a>
+                <a href="">Shoulder bags</a>
+                <a href="">Tote bags</a>
+                <a href="">Care</a>
+              </div>
+            </li>
+            <li class="collections">
+              <a class="linkcollections">Collections</a>
+              <!-------------- list of collections ------------>
+              <div class="collectionlinks">
+                <a href="">Snow Queen</a>
+                <a href="">Recycle</a>
+                <a href="">Classics</a>
+              </div>
+            </li>
+            <!-------------- other categories ------------ -->
+            <li><a href="">New Arrivals</a></li>
+            <li><a href="">Bestsellers</a></li>
+            <li><a href="">Sale</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Sustainability</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </nav></header>
+
+    <main class="container">
+      <!-- Left Column / Bags Image -->
+      <div class="left-column">
+        <img data-image="black" src="images_silfen/1.JPG" alt="" />
+        <img data-image="blue" src="images_silfen/2.JPG" alt="" />
+        <img data-image="red" class="active" src="images_silfen/3.JPG" alt="" />
+      </div>
+
+      <!-- Right Column -->
+      <div class="right-column">
+        <!-- Product Description -->
+        <div class="product-description">
+
+
+
+          <ol class="breadcrumbs">
+            <li class="home"><a href="">Home</a></li>
+            <li class="products"><a href="productlist.html">Products</a></li>
+            <li class="productname"><a href=""></a></li>
+          </ol>
+
+          <h1>Pippi Glossy Vegan Leather</h1>
+
+          <div class="product-price">
+            <span>200,-</span>
+          </div>
+          <p>
+            The Pippi bag is beautifully designed in a glossy, smooth material
+            and comes with silver metal hardware. The cross body bag is vegan.
+            The modern shape combined with a chunky strap gives the bag a sporty
+            and young look. The crossbody bag comes with an adjustable single
+            handle, and another, longer strap for crossbody use. This cute
+            little bag has one large compart- ment with matching lining and a
+            small zipper pocket that can fit small essentials. The bag is easy
+            to clean with a damp cloth, and is perfect for winter!
+          </p>
+        </div>
+
+          <!-- Product Pricing -->
+
+          <!-- Product Color -->
+          <div class="product-color">
+            <span>Colours</span>
+
+            <div class="color-choose">
+              <div>
+                <input
+                  data-image="red"
+                  type="radio"
+                  id="red"
+                  name="color"
+                  value="red"
+                  checked
+                />
+                <label for="red"><span></span></label>
+              </div>
+              <div>
+                <input
+                  data-image="blue"
+                  type="radio"
+                  id="blue"
+                  name="color"
+                  value="blue"
+                />
+                <label for="blue"><span></span></label>
+              </div>
+              <div>
+                <input
+                  data-image="black"
+                  type="radio"
+                  id="black"
+                  name="color"
+                  value="black"
+                />
+                <label for="black"><span></span></label>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="cart-btn">Add to cart</a>
+        </div>
+      </div>
+
+  
+
+
+    </main>
+    
+    <h2>REVIEWS</h2>
+  
+    <!-- <article class="reviews">
+    
+
+      <div class="slideshow-container">
+      <div class="mySlides">
+      <article class="review">
+    <div class="card">
+   
+      <img src="images_silfen/5.JPG" alt="bag" style="width:100%">
+      <h4>SOFIE GRØNGAARD</h4>
+      <h3>PIPPI GLOSSY VEGAN LEATHER</h3>
+      <p class="colour">Blue</p>
+      <p class="description">Love the quality of this bag!
+        It is rather sturdy and made 
+        Of good material. Super cute
+        and classy.</p>
+    </div>
+    </div>
+    
+  
+    <div class="mySlides">
+  <div class="card">
+      <img src="images_silfen/6.JPG" alt="bag" style="width:100%">
+      <h4>SOFIE GRØNGAARD</h4>
+      <h3>PIPPI GLOSSY VEGAN LEATHER</h3>
+      <p class="colour">Blue</p>
+      <p class="description">Love the quality of this bag!
+        It is rather sturdy and made 
+        Of good material. Super cute
+        and classy.</p>
+    </div>
+</div>
+<div class="mySlides"> -->
+
+  <ol class="reviewList"></ol>
+  
+  <template class="review">
+    <div class="mySlides">
+    <div class="card">
+      <h4>SOFIE GRØNGAARD</h4>
+      <!-- <p class="colour">Blue</p> -->
+      <div class="rating">
+      <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+</div>
+      <p class="description">Love the quality of this bag!
+        It is rather sturdy and made 
+        Of good material. Super cute
+        and classy.</p>
+    </div>
+</div>
+</template>
+
+<!-- <div class="mySlides">
+  <div class="card">
+    <img src="images_silfen/1.JPG" alt="bag" style="width:100%">
+    <h4>SOFIE GRØNGAARD</h4>
+    <h3>PIPPI GLOSSY VEGAN LEATHER</h3>
+    <p class="colour">Blue</p>
+    <p class="description">Love the quality of this bag!
+      It is rather sturdy and made 
+      Of good material. Super cute
+      and classy.</p>
+  </div>
+</div> -->
+<!-- Next/prev buttons -->
+
+
+
+
+</div>
+
+  </article>
+
+  <h3>Leave us a review:</h3>
+<form id="reviewForm">
+  <label
+    >E-mail:
+    <input type="email" name="email" required />
+  </label>
+  <label>
+    Username:
+    <input type="text" name="username" required />
+  </label>
+  <label>
+    Your review:
+    <textarea
+      name="content"
+      placeholder="What are your thoughts about this product?"
+    ></textarea>
+  </label>
+  <input type="submit" class="button" value="Send" />
+</form>
+<p class="hidden">Thank you for your review! &#128512;</p>
+<footer>
+  <div class="info">
+    <div class="links1">
+      <a href="">TERMS AND CONDITIONS</a>
+      <a href="">PRIVACY POLICY</a>
+      <a href="">ABOUT US</a>
+      <a href="">SUSTAINABILITY</a>
+    </div>
+    <span class="vertical-line"></span>
+    <div class="links2">
+      <a href="">CONTACT US</a>
+      <p>Phone: +45 20 51 89 23</p>
+      <p>E-mail:info@silfenstudio.com</p>
+      <div class="social-media">
+        <a href="">
+          <img
+            src="img/instagram.png"
+            loading="lazy"
+            alt="instagram icon"
+            class="insta"
+        /></a>
+        <a href="">
+          <img
+            src="img/facebook.png"
+            loading="lazy"
+            alt="instagram icon"
+            class="facebook"
+        /></a>
+      </div>
+    </div>
+    <span class="vertical-line"></span>
+    <div class="links3">
+      <a href="">DELIVERY DETAILS</a>
+      <a>PAYMENT OPTIONS</a>
+      <div class="cards">
+        <a href="">
+          <img loading="lazy" src="img/visa.png" alt="visa card icon"
+        /></a>
+        <a href=""> <img loading="lazy" src="img/mastercard.png" alt="" /></a>
+      </div>
+    </div>
+  </div>
+  <p class="copyright">
+    © Copyright - Silfen - Klareboderne 10, 1, DK-1115 København, CVR.
+    40912320
+  </p>
+</footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <script src="product.js"></script>
+  </body>
+</html>
