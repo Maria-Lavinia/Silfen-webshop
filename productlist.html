@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product List</title>
     <link rel="stylesheet" href="productlist.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
       <nav>
         <div class="nav-container">
@@ -79,35 +79,21 @@
             </ul>
           </div>
         </div>
+      </nav>
     </header>
-    
+
     <main>
-       
-        <div class="dropdown">
-            <h1>Sort by:</h1>
-            <div onclick="myFunction()" class="dropbtn">Colours &#x2193;</div>
-            <div id="myDropdown" class="dropdown-content">
-           
-              <div class="dot4"></div>
-<div class="dot1"></div>
-<div class="dot2"></div>
-<div class="dot3"></div>
-            </div>
-          
+      <template id="product">
+        <article class="product">
+          <img class="productimage" src="images_silfen/1.JPG" alt="Bag" />
+          <h3>Bag</h3>
+          <p class="price">400 DKK</p>
+          <a class="readmore" href="product.html">Read More</a>
 
-        </div>
-        <template id="product">
-            <article class="product">
-              <img class="productimage"
-            
-                src="images_silfen/1.JPG"
-                alt="Bag"/>
-              <h3>Bag</h3>
-              <p class="price">400 DKK</p>
-            </article>
+          <a class="add-cart cart1" href="#">Add to cart</a>
+        </article>
       </template>
-
-            <article class="product">
+      <!-- <article class="product">
                 <img class="productimage"
               
                   src="images_silfen/2.JPG"
@@ -115,7 +101,7 @@
                 <h3>Bag</h3>
                 <p class="price">400 DKK</p>
               </article>
-         
+          
               <article class="product">
                 <img class="productimage"
               
@@ -123,9 +109,56 @@
                   alt="Bag"/>
                 <h3>Bag</h3>
                 <p class="price"> 400 DKK</p>
-              </article>
+              </article>-->
     </main>
+    <footer>
+      <div class="info">
+        <div class="links1">
+          <a href="">TERMS AND CONDITIONS</a>
+          <a href="">PRIVACY POLICY</a>
+          <a href="">ABOUT US</a>
+          <a href="">SUSTAINABILITY</a>
+        </div>
+        <span class="vertical-line"></span>
+        <div class="links2">
+          <a href="">CONTACT US</a>
+          <p>Phone: +45 20 51 89 23</p>
+          <p>E-mail:info@silfenstudio.com</p>
+          <div class="social-media">
+            <a href="">
+              <img
+                src="img/instagram.png"
+                loading="lazy"
+                alt="instagram icon"
+                class="insta"
+            /></a>
+            <a href="">
+              <img
+                src="img/facebook.png"
+                loading="lazy"
+                alt="instagram icon"
+                class="facebook"
+            /></a>
+          </div>
+        </div>
+        <span class="vertical-line"></span>
+        <div class="links3">
+          <a href="">DELIVERY DETAILS</a>
+          <a>PAYMENT OPTIONS</a>
+          <div class="cards">
+            <a href="">
+              <img loading="lazy" src="img/visa.png" alt="visa card icon"
+            /></a>
+            <a href=""> <img loading="lazy" src="img/mastercard.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">
+        © Copyright - Silfen - Klareboderne 10, 1, DK-1115 København, CVR.
+        40912320
+      </p>
+    </footer>
 
     <script src="productlist.js"></script>
-</body>
+  </body>
 </html>

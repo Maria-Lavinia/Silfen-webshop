@@ -1,4 +1,3 @@
-
 const navToggle = document.querySelector(".nav-toggle");
 const categories = document.querySelector(".nav-categories");
 
@@ -35,26 +34,40 @@ silfenplay.addEventListener("click", function () {
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-function handleProductList(data) {
-   console.log(data)
-/data.forEach(showProduct);
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+fetch("https://kea21s-5d8f.restdb.io/rest/product", {
+  method: "GET",
+  headers: {
+    "x-apikey": "606d5ed3f553500431007503",
+  },
+})
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    handleProductlist(data);
+  });
+
+function handleProductlist(data) {
+  //console.log(data);
+  data.forEach(showProduct);
+}
 
 function showProduct(product) {
-   console.log(product);
-  //grab the template
-  
   const template = document.querySelector("#product").content;
-    //clone it
+  //clone it
   const copy = template.cloneNode(true);
   //change content
-    copy.querySelector("h3").textContent = product.productname;
-    copy.querySelector(".price").textContent = product.price + " DKK";
-    copy.querySelector("img.productimage").alt = product.productname;
-      const parent = document.querySelector("main");
-      //append it
-    parent.appendChild(copy);
-}
+  copy.querySelector("h3").textContent = product.productname; 
+  copy.querySelector(".price").textContent = product.price + " DKK";
+  //copy.querySelector(
+  // ".productimage"
+  //  ).textContent = `https://kea-alt-del.dk/t7/images/webp/640/${product._id}.JPG`;
+  copy.querySelector("a").href = `product.html?_id=${product._id}`;
+  //find the daddy
+  const parent = document.querySelector("main");
+  //append it
+  parent.appendChild(copy);
 }
