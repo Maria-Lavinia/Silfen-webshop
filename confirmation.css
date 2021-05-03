@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --link-color: #000;
+
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Manrope", sans-serif;
+  --main-text-color: #000;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: rgba(123, 175, 212, 0.5);
+}
+
+/*STEP PROGRESS BAR AT TOP*/
+
+.progress {
+  margin: 4em auto;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+}
+
+.progress img {
+  width: 50px;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  width: 300px;
+  position: relative;
+}
+
+ul li > i {
+  background: darkgrey;
+  width: 1em;
+  height: 1em;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+ul li > i::after {
+  content: "";
+  background: darkgrey;
+  height: 5px;
+  width: 305px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 75px;
+  z-index: -1;
+}
+
+/*chaning width of line at first and last child*/
+
+ul li:first-child i::after {
+  width: 300px;
+  left: 150px;
+}
+
+ul li:last-child i::after {
+  width: 150px;
+}
+
+/*changing colour of icon and line in progress bar*/
+
+ul li:nth-child(1) i,
+ul li:nth-child(2) i,
+ul li:nth-child(3) i {
+  background: #000;
+}
+
+ul li:nth-child(1) i::after,
+ul li:nth-child(2) i::after,
+ul li:nth-child(3) i::after {
+  background: #000;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--primary-font);
+  align-items: center;
+}
+
+/*Top column*/
+
+.column-one {
+  border-radius: 20px;
+  text-align: center;
+  width: 700px;
+  margin-bottom: 3em;
+  background-color: white;
+  border: 2px solid darkgrey;
+}
+
+/*Itinerary*/
+
+.intinerary {
+  border: 1px solid grey;
+  border-radius: 20px;
+  width: 700px;
+  padding: 2em;
+  background-color: white;
+  border: 2px solid darkgrey;
+}
+
+.basket-info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+  color: var(--main-text-color);
+  font-family: var(--secondary-font);
+  font-size: 1.2em;
+  border-bottom: 2px solid grey;
+}
+
+td {
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 15%;
+  border: 1px solid #000;
+  font-size: 14px;
+  text-align: center;
+}
+
+td a {
+  color: black;
+  font-size: 12px;
+  text-decoration-line: none;
+}
+
+td img {
+  width: 10em;
+  height: 10em;
+  margin-right: 2em;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+.productname {
+  font-weight: 700;
+}
+
+small {
+  color: grey;
+}
+
+@media only screen and (max-width: 320px) {
+  .progress img {
+    width: 30px;
+    margin-bottom: 0.5em;
+  }
+
+  .progress {
+    margin: 1em;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 0.8em;
+  }
+
+  ul li {
+    display: inline-block;
+    width: 70px;
+    position: relative;
+  }
+
+  ul li > i::after {
+    content: "";
+    background: darkgrey;
+    height: 5px;
+    width: 90px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: -1;
+  }
+
+  ul li:first-child i::after {
+    width: 50px;
+    left: 30px;
+  }
+
+  ul li:last-child i::after {
+    width: 30px;
+  }
+
+  .column-one {
+    /* border: 1px solid darkgrey; */
+    border-radius: 20px;
+    text-align: center;
+    width: 15em;
+    margin-bottom: 3em;
+    /* box-shadow: 3px 7px 9px 3px #e6e6e6; */
+  }
+
+  .intinerary {
+    border: 1px solid grey;
+    border-radius: 20px;
+    width: 15em;
+    padding: 0.5em;
+    /* box-shadow: 3px 7px 9px 3px #c9c9c9; */
+  }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="checkout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <!-- progress meter to be added here -->
+    <div class="progress">
+      <ul class="progress-bar">
+        <li>
+          <img
+            class="border"
+            src="checkout-images/shopping_cart_black_24dp.svg"
+            alt="icon"
+          /><br />
+          <i class="fas fa-check"></i>
+          <p>Basket</p>
+        </li>
+        <li>
+          <img
+            class="border"
+            src="checkout-images/point_of_sale_black_24dp.svg"
+            alt="icon"
+          /><br />
+          <i class="fas fa-check"></i>
+          <p>Checkout</p>
+        </li>
+        <li>
+          <img
+            class="border"
+            src="checkout-images/check_black_24dp.svg"
+            alt="icon"
+          /><br />
+          <i class="fas fa-check"></i>
+          <p>Confirmation</p>
+        </li>
+      </ul>
+    </div>
+    <!-- customer form left column -->
+    <div class="content-wrapper">
+      <div class="customer-form">
+        <div class="info">
+          <h1>Billing Information</h1>
+          <form>
+              <i class="fas fa-globe-asia"></i>
+              <select name="country">
+                <option>Denmark</option>
+                <option>Norway</option>
+                <option>Sweden</option>
+                <option>UK</option>
+                <option>US</option>
+                <option>Italy</option>
+                <option>France</option>
+                <option>Germany</option>
+                <option>China</option>
+                <option>South Korea</option>
+                <option>Romania</option>
+                <option>Poland</option>
+                <option>Austria</option>
+                <option>Belgium</option>
+                <option>Canada</option>
+                <option>Japan</option>
+              </select>
+
+              <label for="fname"><i class="fas fa-user"></i> Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full name "
+              required
+            />
+
+            <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
+
+            <label for="adr"><i class="fas fa-address-card"></i> Address</label>
+            <input
+              type="text"
+              id="adr"
+              name="address"
+              placeholder="Street and street number"
+              required
+            />
+
+            <label for="city"><i class="fas fa-building"></i> City</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="city"
+              required
+            />
+
+            <label for="pcode"> Postal Code</label>
+            <input
+              type="number"
+              id="pcode"
+              name="postalcode"
+              placeholder="postal code"
+              required
+            />
+          </div>
+            <div class="proceed-column">
+          <h2>Payment Options</h2>
+          <label for="accept">We Accept</label>
+            <div class="card-icons">
+              <i class="fab fa-cc-paypal"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-amex"></i>
+              <i class="fab fa-cc-visa"></i>
+            </div>
+
+            <label for="cardnumber">Card Number</label>
+            <input
+              type="number"
+              id="ccnum"
+              name="cardnumber"
+              placeholder="1111-2222-3333-4444"
+              required
+            />
+
+            <label for="cvv">CVV</label>
+            <input
+              type="number"
+              id="cvv"
+              name="cvv"
+              placeholder="123"
+              required
+            />
+
+            <label for="cname">Name on card</label>
+            <input
+              type="text"
+              id="cname"
+              name="cname"
+              placeholder="John Double Doe"
+              required
+            />
+
+            <p class="expires">Expiry Month</p>
+            <div class="expiremonth">
+              <select name="expmonth">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+              </select>
+            </div>
+
+            <p class="expires">Expiry Year</p>
+            <div class="expireyear">
+              <select name="expyear">
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+                <option>2029</option>
+                <option>2030</option>
+                <option>2031</option>
+              </select>
+            </div>
+            </div>
+          </div>
+
+       
+
+<!-- total count right column -->
+      <div class="right_container">
+        <h3>
+          Cart<span class="price" style="color: black"
+            ><i class="fas fa-shopping-cart"></i><b> 3</b></span
+          >
+        </h3>
+        <p><a href="#">PRODUCT NAME</a><span class="price">1234 kr</span></p>
+        <p><a href="#">PRODUCT NAME</a><span class="price">1234 kr</span></p>
+        <p><a href="#">PRODUCT NAME</a><span class="price">1234 kr</span></p>
+        <p>
+          Total<span class="price" style="color: black"><b>1234 kr</b></span>
+        </p>
+        <input type="submit" value="Confirm order"></input>
+
+      </form>
+      </div>
+    </div>
+    <footer></footer>
+    <script src="checkoutform.js"></script>
+  </body>
+</html>

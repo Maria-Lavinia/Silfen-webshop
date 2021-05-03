@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --link-color: #000;
+
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Manrope", sans-serif;
+  --main-text-color: #000;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: rgba(123, 175, 212, 0.5);
+}
+
+/*STEP PROGRESS BAR AT TOP*/
+
+.progress {
+  margin: 4em auto;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+}
+
+.progress img {
+  width: 50px;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  width: 300px;
+  position: relative;
+}
+
+ul li > i {
+  background: darkgrey;
+  width: 1em;
+  height: 1em;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+ul li > i::after {
+  content: "";
+  background: darkgrey;
+  height: 5px;
+  width: 305px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 75px;
+  z-index: -1;
+}
+
+/*chaning width of line at first and last child*/
+
+ul li:first-child i::after {
+  width: 300px;
+  left: 150px;
+}
+
+ul li:last-child i::after {
+  width: 150px;
+}
+
+/*changing colour of icon and line in progress bar*/
+
+ul li:nth-child(1) i {
+  background: #000;
+}
+
+ul li:nth-child(1) i::after {
+  background: #000;
+}
+
+/*COUNTRY PICKER*/
+.country > select {
+  font-size: 16px;
+  width: 15em;
+  font-family: var(--primary-font);
+}
+
+.country > i {
+  font-size: 20px;
+}
+
+/*BODY GRID*/
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: form confirm;
+  row-gap: 2sem;
+  column-gap: 2em;
+}
+
+/*FORM LEFT COLUMN*/
+
+.info {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  border: 2px solid darkgrey;
+  border-radius: 20px;
+  row-gap: 0.5em;
+  padding: 4em;
+  color: dimgray;
+  padding-top: 0em;
+  background-color: white;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--secondary-font);
+  color: black;
+  font-size: 2em;
+}
+
+.info input {
+  width: 20rem;
+  height: 3em;
+  border-radius: 10px;
+  border: 1px solid darkgrey;
+  margin-bottom: 1em;
+}
+
+.proceed-column {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  border: 2px solid darkgrey;
+  border-radius: 20px;
+  row-gap: 0.5em;
+  padding: 4em;
+  color: dimgray;
+  background-color: white;
+}
+
+.proceed-column input {
+  max-width: 20rem;
+  height: 3em;
+  border-radius: 10px;
+  border: 1px solid darkgrey;
+  margin-bottom: 1em;
+}
+
+label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.card-icons {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+form.expiremonth > select {
+  font-size: 14px;
+  width: 10em;
+  font-family: var(--primary-font);
+}
+
+form.expireyear > select {
+  font-size: 14px;
+  width: 10em;
+  font-family: var(--primary-font);
+}
+
+/*CHECKOUT COLUMN ON RIGHT*/
+
+.right_container {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  border: 2px solid darkgrey;
+  border-radius: 20px;
+  row-gap: 0.5em;
+  padding: 2em;
+  color: dimgray;
+  padding-top: 0em;
+  height: 26rem;
+  background-color: white;
+}
+
+.right_container > p {
+  margin-bottom: 0em;
+}
+
+.price > i {
+  font-size: 0.9em;
+}
+
+.right_container > button {
+  align-self: center;
+  font-family: var(--primary-font);
+  font-size: 1.3em;
+  border-radius: 50px;
+  border: none;
+  width: 10em;
+  height: 2.5em;
+  margin-top: 1em;
+  background-color: black;
+  color: white;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+.right_container > input {
+  background-color: black;
+  border: none;
+  border-radius: 50px;
+  width: 15em;
+  height: 3em;
+  color: white;
+  font-family: var(--secondary-font);
+  font-size: 1em;
+  align-self: center;
+}
+
+@media only screen and (max-width: 320px) {
+  .progress img {
+    width: 30px;
+    margin-bottom: 0.5em;
+  }
+
+  .progress {
+    margin: 0em;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 0.8em;
+  }
+
+  ul li {
+    display: inline-block;
+    width: 70px;
+    position: relative;
+  }
+
+  ul li > i::after {
+    content: "";
+    background: darkgrey;
+    height: 5px;
+    width: 85px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: -1;
+  }
+
+  ul li:first-child i::after {
+    width: 50px;
+    left: 30px;
+  }
+
+  ul li:last-child i::after {
+    width: 30px;
+  }
+
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0em;
+  }
+
+  .info {
+    margin: 1em;
+    border: 1px solid darkgrey;
+    border-radius: 20px;
+    row-gap: 0.5em;
+    padding: 0.4em;
+  }
+
+  .proceed-column {
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 0.4em;
+  }
+
+  .proceed-column input {
+    max-width: 17em;
+    height: 3em;
+  }
+
+  label {
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .right_container {
+    margin: 0em;
+    border: 1px solid darkgrey;
+    border-radius: 20px;
+    row-gap: 0.5em;
+    padding: 0.4em;
+    color: dimgray;
+    padding-top: 0em;
+    height: 22rem;
+  }
+}
