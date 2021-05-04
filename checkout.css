@@ -264,8 +264,8 @@ span.price {
   }
 
   ul li:first-child i::after {
-    width: 240px;
-    left: 60px;
+    width: 200px;
+    left: 20px;
   }
 
   ul li:last-child i::after {
@@ -278,7 +278,7 @@ span.price {
 
   ul li {
     display: inline-block;
-    width: 160px;
+    width: 140px;
     position: relative;
   }
 
@@ -295,7 +295,7 @@ span.price {
     content: "";
     background: darkgrey;
     height: 5px;
-    width: 200px;
+    width: 180px;
     display: block;
     position: absolute;
     left: 0;
@@ -311,7 +311,85 @@ span.price {
   }
 
   ul li:last-child i::after {
-    width: 80px;
+    width: 60px;
+  }
+
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-areas: form, confirm;
+    row-gap: 2sem;
+    margin: 4em;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+  }
+
+  .proceed-column {
+    display: flex;
+    align-items: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-areas: form, confirm;
+    row-gap: 2em;
+    align-content: center;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    max-width: 19em;
+    margin: 0;
+  }
+
+  .info input {
+    max-width: 15rem;
+    height: 3em;
+    border-radius: 10px;
+    border: 1px solid darkgrey;
+    margin-bottom: 0em;
+  }
+
+  .proceed-column {
+    max-width: 19em;
+    margin: 0em;
+    row-gap: 1em;
+    height: auto;
+  }
+
+  .proceed-column input {
+    max-width: 20rem;
+    height: 3em;
+    border-radius: 10px;
+    border: 1px solid darkgrey;
+    margin-bottom: 0em;
+  }
+
+  .right_container {
+    max-width: 19em;
+    height: auto;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-top: 0.4em;
+    font-size: 1.4em;
+  }
+
+  .right_container > p {
+    margin: 0.2em;
   }
 }
 
