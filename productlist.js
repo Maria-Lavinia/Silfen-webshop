@@ -60,7 +60,7 @@ function showProduct(product) {
   //clone it
   const copy = template.cloneNode(true);
   //change content
-  copy.querySelector("h3").textContent = product.productname; 
+  copy.querySelector("h3").textContent = product.productname;
   copy.querySelector(".price").textContent = product.price + " DKK";
   //copy.querySelector(
   // ".productimage"
