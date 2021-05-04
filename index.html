@@ -9,10 +9,84 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
+
+    <nav>
+        <div class="nav-container">
+          <!---------- line with brands  ----------->
+          <div class="nav-brands">
+            <div class="brands">
+              <div class="silfen">
+                <img src="img/silfen.png" alt="logosilfen" />
+              </div>
+              <div class="silfenplay">
+                <img src="img/silfenplay.png" alt="silfenplay logo" />
+              </div>
+            </div>
+            <!------------ search and basket  --------------->
+            <div class="nav-buttons">
+              <div class="search-container">
+                <form action="/action_page.php">
+                  <input
+                    type="text"
+                    placeholder="Search for a product"
+                    name="search"
+                  />
+                  <button type="submit" class="search">
+                    <img src="img/search.png" alt="search button" />
+                  </button>
+                </form>
+              </div>
+              <button class="basket">
+                <img src="img/basket_1.png" alt="basket icon" />
+              </button>
+            </div>
+          </div>
+          <!------------------ line with categories ------------------->
+          <div class="hamburger-container">
+            <button class="nav-toggle">
+              <img src="img/hamburger.png" alt="burger-menu" />
+            </button>
+          </div>
+          <div class="nav-categories">
+            <ul id="sidemenu">
+              <li class="products">
+                <a class="linkproducts">Products</a>
+                <!---------- list of products  ---------->
+                <div class="productlinks">
+                  <a href="">Bumbags</a>
+                  <a href="">Crossbody bags</a>
+                  <a href="">Wallets</a>
+                  <a href="">Mini bags</a>
+                  <a href="">Shoulder bags</a>
+                  <a href="">Tote bags</a>
+                  <a href="">Care</a>
+                </div>
+              </li>
+              <li class="collections">
+                <a class="linkcollections">Collections</a>
+                <!-------------- list of collections ------------>
+                <div class="collectionlinks">
+                  <a href="">Snow Queen</a>
+                  <a href="">Recycle</a>
+                  <a href="">Classics</a>
+                </div>
+              </li>
+              <!-------------- other categories ------------ -->
+              <li><a href="">New Arrivals</a></li>
+              <li><a href="">Bestsellers</a></li>
+              <li><a href="">Sale</a></li>
+              <li><a href="">About us</a></li>
+              <li><a href="">Sustainability</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+        <div class="video-wrapper">
         <video autoplay loop muted class="background-video">
             <source src="bg-video.mp4" type="video/mp4">
         </video>
+        </div>
 
         <div class="splashes">
             <section class="section1">
@@ -87,6 +161,54 @@
         </div>
         </section>
 
+        <footer>
+          <div class="info">
+            <div class="links1">
+              <a href="">TERMS AND CONDITIONS</a>
+              <a href="">PRIVACY POLICY</a>
+              <a href="">ABOUT US</a>
+              <a href="">SUSTAINABILITY</a>
+            </div>
+            <span class="vertical-line"></span>
+            <div class="links2">
+              <a href="">CONTACT US</a>
+              <p>Phone: +45 20 51 89 23</p>
+              <p>E-mail:info@silfenstudio.com</p>
+              <div class="social-media">
+                <a href="">
+                  <img
+                    src="img/insta.png"
+                    loading="lazy"
+                    alt="instagram icon"
+                    class="insta"
+                /></a>
+                <a href="">
+                  <img
+                    src="img/facebook-3.png"
+                    loading="lazy"
+                    alt="instagram icon"
+                    class="facebook"
+                /></a>
+              </div>
+            </div>
+            <span class="vertical-line"></span>
+            <div class="links3">
+              <a href="">DELIVERY DETAILS</a>
+              <a>PAYMENT OPTIONS</a>
+              <div class="cards">
+                <a href="">
+                  <img loading="lazy" src="img/visa.png" alt="visa card icon"
+                /></a>
+                <a href=""> <img loading="lazy" src="img/mastercard.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <p class="copyright">
+            © Copyright - Silfen - Klareboderne 10, 1, DK-1115 København, CVR.
+            40912320
+          </p>
+        </footer>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
@@ -96,6 +218,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/BezierPlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js" integrity="sha512-uJopPZrz4LAKEGA+MX8mOVQ4YPmaQUPdBu69Gj52/IKC69XIkmvjGrc84UuQ6yJs0tYaaF0r32oQINBXz4t0Pg==" crossorigin="anonymous"></script>
         <script src="index.js"></script>
+        <script src="navjs.js"></script>
 
 </body>
 </html>
