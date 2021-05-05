@@ -34,22 +34,22 @@ ul {
   text-align: center;
 }
 
-ul li {
+ul .steps-bar {
   display: inline-block;
   width: 300px;
   position: relative;
 }
 
-ul li > i {
+ul .steps-bar > i {
   background: darkgrey;
-  width: 1em;
-  height: 1em;
+  width: 1.5em;
+  height: 1.5em;
   color: #fff;
   border-radius: 50%;
   padding: 5px;
 }
 
-ul li > i::after {
+ul .steps-bar > i::after {
   content: "";
   background: darkgrey;
   height: 5px;
@@ -63,26 +63,26 @@ ul li > i::after {
 
 /*chaning width of line at first and last child*/
 
-ul li:first-child i::after {
+ul .steps-bar:first-child i::after {
   width: 300px;
   left: 150px;
 }
 
-ul li:last-child i::after {
+ul .steps-bar:last-child i::after {
   width: 150px;
 }
 
 /*changing colour of icon and line in progress bar*/
 
-ul li:nth-child(1) i,
-ul li:nth-child(2) i,
-ul li:nth-child(3) i {
+ul .steps-bar:nth-child(1) i,
+ul .steps-bar:nth-child(2) i,
+ul .steps-bar:nth-child(3) i {
   background: #000;
 }
 
-ul li:nth-child(1) i::after,
-ul li:nth-child(2) i::after,
-ul li:nth-child(3) i::after {
+ul .steps-bar:nth-child(1) i::after,
+ul .steps-bar:nth-child(2) i::after,
+ul .steps-bar:nth-child(3) i::after {
   background: #000;
 }
 
@@ -105,22 +105,27 @@ main {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: 0;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 1000px) {
+  .progress-bar {
+    display: flex;
+    justify-content: center;
+  }
+
   .progress img {
-    width: 30px;
+    width: 50px;
     margin-bottom: 0.5em;
   }
 
   .progress {
-    margin: 1em;
+    margin: 0.5em;
     font-family: var(--secondary-font);
     font-weight: 500;
     font-size: 0.8em;
@@ -128,7 +133,7 @@ p {
 
   ul li {
     display: inline-block;
-    width: 70px;
+    width: 120px;
     position: relative;
   }
 
@@ -136,21 +141,130 @@ p {
     content: "";
     background: darkgrey;
     height: 5px;
-    width: 90px;
+    width: 140px;
     display: block;
     position: absolute;
     left: 0;
-    top: 50px;
+    top: 70px;
     z-index: -1;
   }
 
   ul li:first-child i::after {
-    width: 50px;
-    left: 30px;
+    width: 240px;
+    left: 60px;
   }
 
   ul li:last-child i::after {
-    width: 30px;
+    width: 50px;
+  }
+
+  td .basket-img {
+    width: 13em;
+    height: 11em;
+    margin-right: 2em;
+  }
+
+  .column-one {
+    max-width: 650px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .progress img {
+    width: 50px;
+    margin-bottom: 0.5em;
+  }
+
+  .progress {
+    margin: 0.5em;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 0.8em;
+  }
+
+  ul li {
+    display: inline-block;
+    width: 120px;
+    position: relative;
+  }
+
+  ul li > i::after {
+    content: "";
+    background: darkgrey;
+    height: 5px;
+    width: 140px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    z-index: -1;
+  }
+
+  ul li:first-child i::after {
+    width: 240px;
+    left: 60px;
+  }
+
+  ul li:last-child i::after {
+    width: 50px;
+  }
+
+  td .basket-img {
+    width: 13em;
+    height: 11em;
+    margin-right: 2em;
+  }
+
+  .column-one {
+    max-width: 470px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .progress {
+    margin: 2em auto;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+  }
+
+  .progress img {
+    width: 40px;
+    margin-bottom: 0.5em;
+  }
+
+  ul .steps-bar {
+    display: inline-block;
+    width: 100px;
+    position: relative;
+  }
+
+  ul .steps-bar > i::after {
+    content: "";
+    background: darkgrey;
+    height: 5px;
+    width: 12em;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    z-index: -1;
+  }
+
+  ul .steps-bar:first-child i::after {
+    width: 100px;
+    left: 50px;
+  }
+
+  ul .steps-bar:last-child i::after {
+    width: 50px;
   }
 
   .column-one {
@@ -158,5 +272,9 @@ p {
     text-align: center;
     width: 15em;
     margin-bottom: 3em;
+  }
+
+  h1 {
+    font-size: 1.5em;
   }
 }

@@ -10,14 +10,14 @@
 }
 
 html {
-  font-size: 100%;
+  overflow: scroll;
 }
 
 body {
   background-color: rgba(123, 175, 212, 0.5);
 }
 
-/*STEP PROGRESS BAR AT TOP*/
+/* progress bar */
 
 .progress {
   margin: 4em auto;
@@ -34,22 +34,22 @@ ul {
   text-align: center;
 }
 
-ul li {
+ul .steps-bar {
   display: inline-block;
   width: 300px;
   position: relative;
 }
 
-ul li > i {
+ul .steps-bar > i {
   background: darkgrey;
-  width: 1em;
-  height: 1em;
+  width: 1.5em;
+  height: 1.5em;
   color: #fff;
   border-radius: 50%;
   padding: 5px;
 }
 
-ul li > i::after {
+ul .steps-bar > i::after {
   content: "";
   background: darkgrey;
   height: 5px;
@@ -63,62 +63,33 @@ ul li > i::after {
 
 /*chaning width of line at first and last child*/
 
-ul li:first-child i::after {
+ul .steps-bar:first-child i::after {
   width: 300px;
   left: 150px;
 }
 
-ul li:last-child i::after {
+ul .steps-bar:last-child i::after {
   width: 150px;
 }
 
 /*changing colour of icon and line in progress bar*/
 
-ul li:nth-child(1) i {
+ul .steps-bar:nth-child(1) i {
   background: #000;
 }
 
-ul li:nth-child(1) i::after {
+ul .steps-bar:nth-child(1) i::after {
   background: #000;
 }
 
-/*COUNTRY PICKER*/
-.country > select {
-  font-size: 16px;
-  width: 15em;
-  font-family: var(--primary-font);
-}
+/* body */
 
-.country > i {
-  font-size: 20px;
-}
-
-/*BODY GRID*/
-
-.content-wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas: form confirm;
-  row-gap: 2sem;
-  column-gap: 2em;
-}
-
-/*FORM LEFT COLUMN*/
-
-.info {
-  font-family: var(--primary-font);
-  font-weight: 400;
-  font-size: 1em;
-  display: flex;
-  flex-direction: column;
-  margin: 2em;
-  border: 2px solid darkgrey;
-  border-radius: 20px;
-  row-gap: 0.5em;
-  padding: 4em;
-  color: dimgray;
-  padding-top: 0em;
-  background-color: white;
+.user-fill-in {
+  max-width: 20rem;
+  height: 3em;
+  border-radius: 10px;
+  border: 1px solid darkgrey;
+  margin-bottom: 1em;
 }
 
 h1,
@@ -127,37 +98,80 @@ h3 {
   font-family: var(--secondary-font);
   color: black;
   font-size: 2em;
+  top: 0;
 }
 
-.info input {
-  width: 20rem;
-  height: 3em;
-  border-radius: 10px;
-  border: 1px solid darkgrey;
-  margin-bottom: 1em;
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: form confirm;
+  row-gap: 2em;
+  column-gap: 2em;
+  margin-right: 3em;
 }
 
-.proceed-column {
+.first-box {
   font-family: var(--primary-font);
   font-weight: 400;
   font-size: 1em;
+  margin: 2em;
+  border: 2px solid darkgrey;
+  border-radius: 20px;
+  row-gap: 0.5em;
+  padding-left: 3em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  color: dimgray;
+  background-color: white;
+}
+
+.second-box {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 1em;
+  padding-left: 3em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  margin: 2em;
+  border: 2px solid darkgrey;
+  border-radius: 20px;
+  row-gap: 0.5em;
+  color: dimgray;
+  background-color: white;
+}
+
+.third-box {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 0.9em;
   display: flex;
   flex-direction: column;
   margin: 2em;
   border: 2px solid darkgrey;
   border-radius: 20px;
   row-gap: 0.5em;
-  padding: 4em;
+  padding: 1em;
   color: dimgray;
+  padding-top: 1em;
   background-color: white;
+  max-height: 16em;
 }
 
-.proceed-column input {
-  max-width: 20rem;
-  height: 3em;
+.customer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.expires {
+  width: 15em;
+  height: 2em;
   border-radius: 10px;
   border: 1px solid darkgrey;
-  margin-bottom: 1em;
+}
+
+span.price {
+  float: right;
+  color: grey;
 }
 
 label {
@@ -170,46 +184,19 @@ label {
   margin-bottom: 1em;
 }
 
-form.expiremonth > select {
+.expiremonth .expires {
   font-size: 14px;
   width: 10em;
   font-family: var(--primary-font);
 }
 
-form.expireyear > select {
+.expireyear .expires {
   font-size: 14px;
   width: 10em;
   font-family: var(--primary-font);
 }
 
-/*CHECKOUT COLUMN ON RIGHT*/
-
-.right_container {
-  font-family: var(--primary-font);
-  font-weight: 400;
-  font-size: 1em;
-  display: flex;
-  flex-direction: column;
-  margin: 2em;
-  border: 2px solid darkgrey;
-  border-radius: 20px;
-  row-gap: 0.5em;
-  padding: 2em;
-  color: dimgray;
-  padding-top: 0em;
-  height: 26rem;
-  background-color: white;
-}
-
-.right_container > p {
-  margin-bottom: 0em;
-}
-
-.price > i {
-  font-size: 0.9em;
-}
-
-.right_container > button {
+.finished-button {
   align-self: center;
   font-family: var(--primary-font);
   font-size: 1.3em;
@@ -217,262 +204,83 @@ form.expireyear > select {
   border: none;
   width: 10em;
   height: 2.5em;
-  margin-top: 1em;
   background-color: black;
   color: white;
 }
 
-span.price {
-  float: right;
-  color: grey;
-}
-
-.right_container > input {
-  background-color: black;
-  border: none;
-  border-radius: 50px;
-  width: 15em;
-  height: 3em;
-  color: white;
-  font-family: var(--secondary-font);
-  font-size: 1em;
-  align-self: center;
-}
-
-@media only screen and (max-width: 1000px) {
-  .progress-bar {
-    display: flex;
-    justify-content: center;
+@media only screen and (max-width: 320px) {
+  .progress {
+    margin: 2em auto;
+    font-family: var(--secondary-font);
+    font-weight: 500;
   }
 
   .progress img {
-    width: 50px;
+    width: 40px;
     margin-bottom: 0.5em;
   }
 
-  .progress {
-    margin: 0.5em;
-    font-family: var(--secondary-font);
-    font-weight: 500;
-    font-size: 0.8em;
-  }
-
-  ul li {
+  ul .steps-bar {
     display: inline-block;
-    width: 120px;
+    width: 100px;
     position: relative;
   }
 
-  ul li:first-child i::after {
-    width: 200px;
-    left: 20px;
-  }
-
-  ul li:last-child i::after {
-    width: 40px;
-  }
-
-  ul {
-    text-align: center;
-  }
-
-  ul li {
-    display: inline-block;
-    width: 140px;
-    position: relative;
-  }
-
-  ul li > i {
-    background: darkgrey;
-    width: 1em;
-    height: 1em;
-    color: #fff;
-    border-radius: 50%;
-    padding: 5px;
-  }
-
-  ul li > i::after {
+  ul .steps-bar > i::after {
     content: "";
     background: darkgrey;
     height: 5px;
-    width: 180px;
+    width: 12em;
     display: block;
     position: absolute;
     left: 0;
-    top: 70px;
+    top: 65px;
     z-index: -1;
   }
 
   /*chaning width of line at first and last child*/
 
-  ul li:first-child i::after {
-    width: 90px;
-    left: 70px;
+  ul .steps-bar:first-child i::after {
+    width: 100px;
+    left: 40px;
   }
 
-  ul li:last-child i::after {
-    width: 60px;
+  ul .steps-bar:last-child i::after {
+    width: 40px;
   }
 
   .content-wrapper {
     display: grid;
     grid-template-columns: 2fr;
     grid-template-areas: form, confirm;
-    row-gap: 2sem;
-    margin: 4em;
-  }
-
-  .info {
-    display: flex;
-    align-items: center;
-  }
-
-  .proceed-column {
-    display: flex;
-    align-items: center;
-  }
-
-  h3 {
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .content-wrapper {
-    display: grid;
-    grid-template-columns: 2fr;
-    grid-template-areas: form, confirm;
-    row-gap: 2em;
-    align-content: center;
-  }
-
-  .info {
-    display: flex;
-    align-items: center;
-    max-width: 19em;
+    row-gap: 0em;
     margin: 0;
   }
 
-  .info input {
-    max-width: 15rem;
-    height: 3em;
-    border-radius: 10px;
-    border: 1px solid darkgrey;
-    margin-bottom: 0em;
-  }
-
-  .proceed-column {
-    max-width: 19em;
-    margin: 0em;
-    row-gap: 1em;
-    height: auto;
-  }
-
-  .proceed-column input {
-    max-width: 20rem;
-    height: 3em;
-    border-radius: 10px;
-    border: 1px solid darkgrey;
-    margin-bottom: 0em;
-  }
-
-  .right_container {
-    max-width: 19em;
-    height: auto;
-  }
-
-  h1,
-  h2,
-  h3 {
-    margin-top: 0.4em;
-    font-size: 1.4em;
-  }
-
-  .right_container > p {
-    margin: 0.2em;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .progress img {
-    width: 30px;
-    margin-bottom: 0.5em;
-  }
-
-  .progress {
-    margin: 0em;
-    font-family: var(--secondary-font);
-    font-weight: 500;
-    font-size: 0.8em;
-  }
-
-  ul li {
-    display: inline-block;
-    width: 70px;
-    position: relative;
-  }
-
-  ul li > i::after {
-    content: "";
-    background: darkgrey;
-    height: 5px;
-    width: 85px;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 50px;
-    z-index: -1;
-  }
-
-  ul li:first-child i::after {
-    width: 50px;
-    left: 30px;
-  }
-
-  ul li:last-child i::after {
-    width: 30px;
-  }
-
-  .content-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 0em;
-  }
-
-  .info {
-    margin: 1em;
-    border: 1px solid darkgrey;
-    border-radius: 20px;
+  .first-box {
+    font-size: 0.9em;
+    margin: 0.8em;
     row-gap: 0.5em;
-    padding: 0.4em;
+    padding: 0.5em;
   }
 
-  .proceed-column {
+  .second-box {
     font-size: 1em;
-    display: flex;
-    flex-direction: column;
-    margin: 1em;
-    padding: 0.4em;
+    padding-left: 3em;
+    padding: 0.5em;
+    margin: 0.8em;
   }
 
-  .proceed-column input {
-    max-width: 17em;
-    height: 3em;
-  }
-
-  label {
-    margin-bottom: 5px;
-    display: block;
-  }
-
-  .right_container {
-    margin: 0em;
-    border: 1px solid darkgrey;
+  third-box {
+    margin: 0.8em;
+    border: 2px solid darkgrey;
     border-radius: 20px;
     row-gap: 0.5em;
-    padding: 0.4em;
-    color: dimgray;
-    padding-top: 0em;
-    height: 22rem;
+    padding: 0.5em;
+    font-size: 1em;
+  }
+
+  span.price {
+    font-size: 1em;
   }
 }

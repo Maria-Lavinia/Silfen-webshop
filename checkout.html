@@ -4,19 +4,92 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navcss.css" />
     <link rel="stylesheet" href="checkout.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <title>Document</title>
+    <title>checkout</title>
   </head>
   <body>
-    <header></header>
-    <!-- progress meter to be added here -->
+    <!---------------- global navigation --------------->
+    <nav>
+      <div class="nav-container">
+        <!---------- line with brands  ----------->
+        <div class="nav-brands">
+          <div class="brands">
+            <div class="silfen">
+              <img src="img/silfen.png" alt="logosilfen" />
+            </div>
+            <div class="silfenplay">
+              <img src="img/silfenplay.png" alt="silfenplay logo" />
+            </div>
+          </div>
+          <!------------ search and basket  --------------->
+          <div class="nav-buttons">
+            <div class="search-container">
+              <form action="/action_page.php">
+                <input
+                  type="text"
+                  placeholder="Search for a product"
+                  name="search"
+                />
+                <button type="submit" class="search">
+                  <img src="img/search.png" alt="search button" />
+                </button>
+              </form>
+            </div>
+            <button class="basket">
+              <img src="img/basket_1.png" alt="basket icon" />
+            </button>
+          </div>
+        </div>
+        <!------------------ line with categories ------------------->
+        <div class="hamburger-container">
+          <button class="nav-toggle">
+            <img src="img/hamburger.png" alt="burger-menu" />
+          </button>
+        </div>
+        <div class="nav-categories">
+          <ul id="sidemenu">
+            <li class="products">
+              <a class="linkproducts">Products</a>
+              <!---------- list of products  ---------->
+              <div class="productlinks">
+                <a href="">Bumbags</a>
+                <a href="">Crossbody bags</a>
+                <a href="">Wallets</a>
+                <a href="">Mini bags</a>
+                <a href="">Shoulder bags</a>
+                <a href="">Tote bags</a>
+                <a href="">Care</a>
+              </div>
+            </li>
+            <li class="collections">
+              <a class="linkcollections">Collections</a>
+              <!-------------- list of collections ------------>
+              <div class="collectionlinks">
+                <a href="">Snow Queen</a>
+                <a href="">Recycle</a>
+                <a href="">Classics</a>
+              </div>
+            </li>
+            <!-------------- other categories ------------ -->
+            <li><a href="">New Arrivals</a></li>
+            <li><a href="">Bestsellers</a></li>
+            <li><a href="">Sale</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Sustainability</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="progress">
       <ul class="progress-bar">
-        <li>
+        <li class="steps-bar">
           <img
             class="border"
             src="checkout-images/shopping_cart_black_24dp.svg"
@@ -25,7 +98,7 @@
           <i class="fas fa-check"></i>
           <p>Basket</p>
         </li>
-        <li>
+        <li class="steps-bar">
           <img
             class="border"
             src="checkout-images/point_of_sale_black_24dp.svg"
@@ -34,7 +107,7 @@
           <i class="fas fa-check"></i>
           <p>Checkout</p>
         </li>
-        <li>
+        <li class="steps-bar">
           <img
             class="border"
             src="checkout-images/check_black_24dp.svg"
@@ -45,117 +118,109 @@
         </li>
       </ul>
     </div>
-    <!-- customer form left column -->
+
+
     <div class="content-wrapper">
-      <div class="customer-form">
-        <div class="info">
-          <h1>Billing Information</h1>
-          <form>
-              <i class="fas fa-globe-asia"></i>
-              <select name="country">
-                <option>Denmark</option>
-                <option>Norway</option>
-                <option>Sweden</option>
-                <option>UK</option>
-                <option>US</option>
-                <option>Italy</option>
-                <option>France</option>
-                <option>Germany</option>
-                <option>China</option>
-                <option>South Korea</option>
-                <option>Romania</option>
-                <option>Poland</option>
-                <option>Austria</option>
-                <option>Belgium</option>
-                <option>Canada</option>
-                <option>Japan</option>
-              </select>
+      <div class="left-column">
+      <div class="first-box">
+      <h1>Billing Information</h1>
+      <form class="customer-form">
+        <label for="fname"><i class="fas fa-user"></i> Full Name</label>
+        <input
+          class="user-fill-in"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Full name "
+          required
+        />
 
-              <label for="fname"><i class="fas fa-user"></i> Full Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Full name "
-              required
-            />
+        <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+        <input
+          class="user-fill-in"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.com"
+          required
+        />
 
-            <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="example@email.com"
-              required
-            />
+        <label for="adr"><i class="fas fa-address-card"></i> Address</label>
+        <input
+          class="user-fill-in"
+          type="text"
+          id="adr"
+          name="address"
+          placeholder="Street and street number"
+          required
+        />
 
-            <label for="adr"><i class="fas fa-address-card"></i> Address</label>
-            <input
-              type="text"
-              id="adr"
-              name="address"
-              placeholder="Street and street number"
-              required
-            />
+        <label for="city"><i class="fas fa-building"></i> City</label>
+        <input
+          class="user-fill-in"
+          type="text"
+          id="city"
+          name="city"
+          placeholder="city"
+          required
+        />
 
-            <label for="city"><i class="fas fa-building"></i> City</label>
-            <input
-              type="text"
-              id="city"
-              name="city"
-              placeholder="city"
-              required
-            />
+        <label for="pcode"> Postal Code</label>
+        <input
+          class="user-fill-in"
+          type="number"
+          id="pcode"
+          name="postalcode"
+          placeholder="postal code"
+          required
+        />
+        </form>
+      </div>
 
-            <label for="pcode"> Postal Code</label>
-            <input
-              type="number"
-              id="pcode"
-              name="postalcode"
-              placeholder="postal code"
-              required
-            />
-          </div>
-            <div class="proceed-column">
+      <div class="second-box">
           <h2>Payment Options</h2>
+          <form class="customer-form">
           <label for="accept">We Accept</label>
-            <div class="card-icons">
-              <i class="fab fa-cc-paypal"></i>
-              <i class="fab fa-cc-mastercard"></i>
-              <i class="fab fa-cc-amex"></i>
-              <i class="fab fa-cc-visa"></i>
-            </div>
+          <div class="card-icons">
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-visa"></i>
+          </div>
 
-            <label for="cardnumber">Card Number</label>
-            <input
-              type="number"
-              id="ccnum"
-              name="cardnumber"
-              placeholder="1111-2222-3333-4444"
-              required
-            />
+          <label for="cardnumber">Card Number</label>
+          <input
+            class="user-fill-in"
+            type="number"
+            id="ccnum"
+            name="cardnumber"
+            placeholder="1111-2222-3333-4444"
+            required
+          />
 
-            <label for="cvv">CVV</label>
-            <input
-              type="number"
-              id="cvv"
-              name="cvv"
-              placeholder="123"
-              required
-            />
+          <label for="cvv">CVV</label>
+          <input
+            class="user-fill-in"
+            type="number"
+            id="cvv"
+            name="cvv"
+            placeholder="123"
+            required
+          />
 
-            <label for="cname">Name on card</label>
-            <input
-              type="text"
-              id="cname"
-              name="cname"
-              placeholder="John Double Doe"
-              required
-            />
+          <label for="cname">Name on card</label>
+          <input
+            class="user-fill-in"
+            type="text"
+            id="cname"
+            name="cname"
+            placeholder="John Double Doe"
+            required
+          />
 
-            <p class="expires">Expiry Month</p>
+          <p class="month-year">Expiry Month</p>
             <div class="expiremonth">
-              <select name="expmonth">
+              <select class="expires" name="expmonth">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -171,44 +236,89 @@
               </select>
             </div>
 
-            <p class="expires">Expiry Year</p>
-            <div class="expireyear">
-              <select name="expyear">
-                <option>2021</option>
-                <option>2022</option>
-                <option>2023</option>
-                <option>2024</option>
-                <option>2025</option>
-                <option>2026</option>
-                <option>2027</option>
-                <option>2028</option>
-                <option>2029</option>
-                <option>2030</option>
-                <option>2031</option>
-              </select>
-            </div>
-            </div>
-          </div>
+          <p class="month-year">Expiry Year</p>
+          <div class="expireyear">
+            <select class="expires" name="expyear">
+              <option>2021</option>
+              <option>2022</option>
+              <option>2023</option>
+              <option>2024</option>
+              <option>2025</option>
+              <option>2026</option>
+              <option>2027</option>
+              <option>2028</option>
+              <option>2029</option>
+              <option>2030</option>
+              <option>2031</option>
+            </select>
+          </form>
+      </div>
+      </div>
+      </div>
 
-       
-
-<!-- total count right column -->
-      <div class="right_container">
+      <div class="third-box">
         <h3>
           Cart<span class="price" style="color: black"></span>
         </h3>
-        <p><a href="#">PRODUCT NAME</a><span class="price">1234 kr</span></p>
-        <p><a href="#">PRODUCT NAME</a><span class="price">1234 kr</span></p>
-        <p><a href="#">PRODUCT NAME</a><span class="price">1234 kr</span></p>
+        <p><a class="single-item" href="#">YASMIN RECYCLED</a><span class="price">399 kr</span></p>
         <p>
-          Total<span class="price" style="color: black"><b>1234 kr</b></span>
+          Total<span class="price" style="color: black"><b>434 kr</b></span>
         </p>
-        <input type="submit" value="Confirm order"></input>
-
-      </form>
+        <form class="customer-form">
+          <input class="finished-button" type="submit" formaction="confirmation.html" value="Confirm order"></input>
+        </form>
       </div>
-    </div>
-    <footer></footer>
+</div>
+    <footer>
+      <div class="info">
+        <div class="links1">
+          <a href="">TERMS AND CONDITIONS</a>
+          <a href="">PRIVACY POLICY</a>
+          <a href="">ABOUT US</a>
+          <a href="">SUSTAINABILITY</a>
+        </div>
+        <span class="vertical-line"></span>
+        <div class="links2">
+          <a href="">CONTACT US</a>
+          <p>Phone: +45 20 51 89 23</p>
+          <p>E-mail:info@silfenstudio.com</p>
+          <div class="social-media">
+            <a href="">
+              <img
+                src="footer/insta.png"
+                loading="lazy"
+                alt="instagram icon"
+                class="insta"
+            /></a>
+            <a href="">
+              <img
+                src="footer/facebook-3.png"
+                loading="lazy"
+                alt="instagram icon"
+                class="facebook"
+            /></a>
+          </div>
+        </div>
+        <span class="vertical-line"></span>
+        <div class="links3">
+          <a href="">DELIVERY DETAILS</a>
+          <a>PAYMENT OPTIONS</a>
+          <div class="cards">
+            <a href="">
+              <img loading="lazy" src="footer/visa.png" alt="visa card icon"
+            /></a>
+            <a href="">
+              <img loading="lazy" src="footer/mastercard.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">
+        © Copyright - Silfen - Klareboderne 10, 1, DK-1115 København, CVR.
+        40912320
+      </p>
+    </footer>
+    <script src="navjs.js"></script>
     <script src="checkoutform.js"></script>
   </body>
 </html>
