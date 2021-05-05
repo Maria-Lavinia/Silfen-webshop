@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="confirmation.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="navcss.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -12,11 +14,82 @@
     <title>Document</title>
   </head>
   <body>
-    <header></header>
+    <!---------------- global navigation --------------->
+    <nav>
+      <div class="nav-container">
+        <!---------- line with brands  ----------->
+        <div class="nav-brands">
+          <div class="brands">
+            <div class="silfen">
+              <img src="img/silfen.png" alt="logosilfen" />
+            </div>
+            <div class="silfenplay">
+              <img src="img/silfenplay.png" alt="silfenplay logo" />
+            </div>
+          </div>
+          <!------------ search and basket  --------------->
+          <div class="nav-buttons">
+            <div class="search-container">
+              <form action="/action_page.php">
+                <input
+                  type="text"
+                  placeholder="Search for a product"
+                  name="search"
+                />
+                <button type="submit" class="search">
+                  <img src="img/search.png" alt="search button" />
+                </button>
+              </form>
+            </div>
+            <button class="basket">
+              <img src="img/basket_1.png" alt="basket icon" />
+            </button>
+          </div>
+        </div>
+        <!------------------ line with categories ------------------->
+        <div class="hamburger-container">
+          <button class="nav-toggle">
+            <img src="img/hamburger.png" alt="burger-menu" />
+          </button>
+        </div>
+        <div class="nav-categories">
+          <ul id="sidemenu">
+            <li class="products">
+              <a class="linkproducts">Products</a>
+              <!---------- list of products  ---------->
+              <div class="productlinks">
+                <a href="">Bumbags</a>
+                <a href="">Crossbody bags</a>
+                <a href="">Wallets</a>
+                <a href="">Mini bags</a>
+                <a href="">Shoulder bags</a>
+                <a href="">Tote bags</a>
+                <a href="">Care</a>
+              </div>
+            </li>
+            <li class="collections">
+              <a class="linkcollections">Collections</a>
+              <!-------------- list of collections ------------>
+              <div class="collectionlinks">
+                <a href="">Snow Queen</a>
+                <a href="">Recycle</a>
+                <a href="">Classics</a>
+              </div>
+            </li>
+            <!-------------- other categories ------------ -->
+            <li><a href="">New Arrivals</a></li>
+            <li><a href="">Bestsellers</a></li>
+            <li><a href="">Sale</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Sustainability</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- progress meter to be added here -->
     <div class="progress">
       <ul class="progress-bar">
-        <li>
+        <li class="steps-bar">
           <img
             class="border"
             src="checkout-images/shopping_cart_black_24dp.svg"
@@ -25,7 +98,7 @@
           <i class="fas fa-check"></i>
           <p>Basket</p>
         </li>
-        <li>
+        <li class="steps-bar">
           <img
             class="border"
             src="checkout-images/point_of_sale_black_24dp.svg"
@@ -34,70 +107,73 @@
           <i class="fas fa-check"></i>
           <p>Checkout</p>
         </li>
-        <li>
+        <li class="steps-bar">
           <img
             class="border"
             src="checkout-images/check_black_24dp.svg"
             alt="icon"
           /><br />
-          <i class="fas fa-check"></i>          <p>Confirmation</p>
+          <i class="fas fa-check"></i>
+          <p>Confirmation</p>
         </li>
       </ul>
     </div>
-    <!-- body flex -->
+    <!-- body  -->
     <main>
       <div class="column-one">
         <h1>Thank you for your order</h1>
         <p>A confirmaton with your intinerary has been sent to your email.</p>
       </div>
-
-      <div class="intinerary">
-        <table class="items">
-          <tr class="single-item">
-            <td>
-              <div class="basket-info">
-              <img
-              src="checkout-images/520010_TROPICAL-BREE_FRONT.jpg"
-              alt="text here"
-            />
-            <div>
-              <p class="productname">PRODUCT NAME</p>
-              <p class="colour">COLOUR</p>
-              <small>PRICE</small>
-              </div>
-            </td>
-          </tr>
-          <tr class="single-item">
-            <td>
-              <div class="basket-info">
-              <img
-              src="checkout-images/520010_TROPICAL-BREE_FRONT.jpg"
-              alt="text here"
-            />
-            <div>
-              <p class="productname">PRODUCT NAME</p>
-              <p class="colour">COLOUR</p>
-              <small>PRICE</small>
-              </div>
-            </td>
-          </tr>
-          <tr class="single-item">
-            <td>
-              <div class="basket-info">
-              <img
-              src="checkout-images/520010_TROPICAL-BREE_FRONT.jpg"
-              alt="text here"
-            />
-            <div>
-              <p class="productname">PRODUCT NAME</p>
-              <p class="colour">COLOUR</p>
-              <small>PRICE</small>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="info">
+        <div class="links1">
+          <a href="">TERMS AND CONDITIONS</a>
+          <a href="">PRIVACY POLICY</a>
+          <a href="">ABOUT US</a>
+          <a href="">SUSTAINABILITY</a>
+        </div>
+        <span class="vertical-line"></span>
+        <div class="links2">
+          <a href="">CONTACT US</a>
+          <p>Phone: +45 20 51 89 23</p>
+          <p>E-mail:info@silfenstudio.com</p>
+          <div class="social-media">
+            <a href="">
+              <img
+                src="footer/insta.png"
+                loading="lazy"
+                alt="instagram icon"
+                class="insta"
+            /></a>
+            <a href="">
+              <img
+                src="footer/facebook-3.png"
+                loading="lazy"
+                alt="instagram icon"
+                class="facebook"
+            /></a>
+          </div>
+        </div>
+        <span class="vertical-line"></span>
+        <div class="links3">
+          <a href="">DELIVERY DETAILS</a>
+          <a>PAYMENT OPTIONS</a>
+          <div class="cards">
+            <a href="">
+              <img loading="lazy" src="footer/visa.png" alt="visa card icon"
+            /></a>
+            <a href="">
+              <img loading="lazy" src="footer/mastercard.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">
+        © Copyright - Silfen - Klareboderne 10, 1, DK-1115 København, CVR.
+        40912320
+      </p>
+    </footer>
+    <script src="navjs.js"></script>
   </body>
 </html>
