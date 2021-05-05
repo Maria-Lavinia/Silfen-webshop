@@ -31,11 +31,11 @@ silfenplay.addEventListener("click", function () {
   silfenplay.classList.toggle("blue");
 });
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+// /* When the user clicks on the button,
+// toggle between hiding and showing the dropdown content */
+// function myFunction() {
+//   document.getElementById("myDropdown").classList.toggle("show");
+// }
 
 fetch("https://kea21s-5d8f.restdb.io/rest/product", {
   method: "GET",
@@ -62,12 +62,11 @@ function showProduct(product) {
   //change content
   copy.querySelector("h3").textContent = product.productname;
   copy.querySelector(".price").textContent = product.price + " DKK";
-  //copy.querySelector(
-  // ".productimage"
-  //  ).textContent = `https://kea-alt-del.dk/t7/images/webp/640/${product._id}.JPG`;
+  copy.querySelector(".productimage").src = product.productimage;
   copy.querySelector("a").href = `product.html?_id=${product._id}`;
   //find the daddy
   const parent = document.querySelector("main");
   //append it
   parent.appendChild(copy);
 }
+// let cart = document.querySelector;

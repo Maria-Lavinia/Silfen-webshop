@@ -17,11 +17,11 @@
 .right-column {
   width: 35%;
   margin-top: 60px;
-  margin-bottom: 150px;
+  margin-bottom: 0px;
 }
 /* Left Column */
 .left-column img {
-  width: 100%;
+  width: 85%;
   position: absolute;
   left: 0;
   top: 0;
@@ -36,7 +36,7 @@
 
 /* Product Description */
 .product-description {
-  border-bottom: 1px solid #e1e8ee;
+  border-bottom: 1px solid #7bafd4;
   margin-bottom: 20px;
 }
 .product-description span {
@@ -53,6 +53,8 @@
   color: #43484d;
   letter-spacing: -2px;
   font-family: "Manrope", sans-serif;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .product-description p {
   font-size: 16px;
@@ -152,12 +154,17 @@ h3 {
 h3 {
   font-family: "Manrope", sans-serif;
 }
+
+h4 {
+  margin-bottom: 10px;
+}
 .description,
 .colour {
   margin-left: 30px;
 }
 .description {
   padding-bottom: 30px;
+  margin-top: 10px;
 }
 h1 {
   text-align: center;
@@ -166,13 +173,11 @@ h1 {
 h2 {
   text-align: center;
   font-family: "Manrope", sans-serif;
-  margin-top: 250px;
-
+  margin-top: 100px;
 }
 .reviews {
   display: flex;
   flex-direction: row;
-
 }
 
 a {
@@ -181,11 +186,7 @@ a {
   padding: 8px 16px;
 }
 
-/* Slideshow container */
 
-/* .slideshow-container {
-  position: relative;
-}
 /* Slides */
 .mySlides {
   /* display: none; */
@@ -250,9 +251,7 @@ h3 {
   padding: 10px;
 }
 
-
 /*footer*/
-
 
 ul {
   list-style-type: none;
@@ -331,6 +330,7 @@ footer img {
 
 @media (max-width: 940px) {
   .container {
+    display: flex;
     flex-direction: column;
     margin-top: 60px;
   }
@@ -341,17 +341,26 @@ footer img {
   }
 
   .left-column img {
-    width: 300px;
-    right: 0;
-    top: -65px;
-    left: initial;
+    width: 100%;
+  }
+  .right-column {
+    margin-top: 250px;
   }
 }
 
 @media (max-width: 535px) {
   .left-column img {
     width: 220px;
-    top: -85px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+  .right-column {
+    margin-bottom: 0;
   }
 }
 /*footer*/
@@ -432,21 +441,17 @@ footer img {
   list-style-type: none;
   display: inline-flex;
   font-family: "Roboto", sans-serif;
+  color: black;
 }
-.breadcrumbs li::after {
-  display: inline-flex;
-  width: 9px;
-  height: 9px;
-  margin: 0 5px;
-  content: "";
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14"><path fill="none" stroke="black" d="M.8 12.87l7.5-6-7.5-6"></path></svg>');
-  background-repeat: no-repeat;
+.breadcrumbs ol {
+  display: inline;
 }
 
-.breadcrumbs li:last-child::after {
-  background: none;
+li.productname {
+  margin-top: 9px;
+  margin-left: 11px;
+  color: #7bafd4;
 }
-
-
-
-
+li a {
+  color: #7bafd4;
+}
