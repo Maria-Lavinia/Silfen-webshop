@@ -23,11 +23,11 @@ const silfen = document.querySelector(".silfen");
 const silfenplay = document.querySelector(".silfenplay");
 
 silfen.addEventListener("click", function () {
-  //   window.location.href = "index.html";-------need to add this when other pages ready
+  window.location.href = "index.html";
   silfen.classList.toggle("blue");
 });
 silfenplay.addEventListener("click", function () {
-  //   window.location.href = "index.html";-------need to add this when other pages ready
+    window.location.href = "silfenplay.html";
   silfenplay.classList.toggle("blue");
 });
 
